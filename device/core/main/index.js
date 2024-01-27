@@ -14,9 +14,9 @@ const axios = require('axios')
 // fetch from'./fetch.mjs'
 functions = require('../utils/functions.js');
 var queue = new Map();
-proces = require('./variables.json');
+//proces = require('./variables.json');
 //device.client_login;
-device.client_login(proces.token);
+device.client_login(process.env.token);
 device.client.on('ready',() => {
 device.client.testing_thing = 'a test that has been passed'  
 console.log('login sucessful');
